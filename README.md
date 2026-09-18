@@ -4,15 +4,15 @@ A home for your personal AI Twin: a small program that runs on your own computer
 
 This is a **private beta**. Expect rough edges, and tell us what you hit.
 
-## Download (build 333768d)
+## Download (build 7b5c9e2)
 
 | Your computer | File |
 |---|---|
-| Windows 10 or 11 | [torus-win-x64-333768d.zip](https://github.com/harrybuck/torus-core/releases/download/beta-333768d/torus-win-x64-333768d.zip) |
-| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-333768d.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-333768d/torus-mac-arm64-333768d.tar.gz) |
-| Mac with an Intel processor | [torus-mac-x64-333768d.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-333768d/torus-mac-x64-333768d.tar.gz) |
+| Windows 10 or 11 | [torus-win-x64-7b5c9e2.zip](https://github.com/harrybuck/torus-core/releases/download/beta-7b5c9e2/torus-win-x64-7b5c9e2.zip) |
+| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-7b5c9e2.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-7b5c9e2/torus-mac-arm64-7b5c9e2.tar.gz) |
+| Mac with an Intel processor | [torus-mac-x64-7b5c9e2.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-7b5c9e2/torus-mac-x64-7b5c9e2.tar.gz) |
 
-Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-333768d/SHA256SUMS-333768d.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-333768d/SHA256SUMS-win-333768d.txt)
+Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-7b5c9e2/SHA256SUMS-7b5c9e2.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-7b5c9e2/SHA256SUMS-win-7b5c9e2.txt)
 
 ## Before you install: your Twin needs an AI to think with
 
