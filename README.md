@@ -4,15 +4,15 @@ A home for your personal AI Twin: a small program that runs on your own computer
 
 This is a **private beta**. Expect rough edges, and tell us what you hit.
 
-## Download (build f1e31ff)
+## Download (build 4314bd4)
 
 | Your computer | File |
 |---|---|
-| Windows 10 or 11 | [torus-win-x64-f1e31ff.zip](https://github.com/harrybuck/torus-core/releases/download/beta-f1e31ff/torus-win-x64-f1e31ff.zip) |
-| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-f1e31ff.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-f1e31ff/torus-mac-arm64-f1e31ff.tar.gz) |
-| Mac with an Intel processor | [torus-mac-x64-f1e31ff.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-f1e31ff/torus-mac-x64-f1e31ff.tar.gz) |
+| Windows 10 or 11 | [torus-win-x64-4314bd4.zip](https://github.com/harrybuck/torus-core/releases/download/beta-4314bd4/torus-win-x64-4314bd4.zip) |
+| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-4314bd4.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-4314bd4/torus-mac-arm64-4314bd4.tar.gz) |
+| Mac with an Intel processor | [torus-mac-x64-4314bd4.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-4314bd4/torus-mac-x64-4314bd4.tar.gz) |
 
-Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-f1e31ff/SHA256SUMS-f1e31ff.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-f1e31ff/SHA256SUMS-win-f1e31ff.txt)
+Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-4314bd4/SHA256SUMS-4314bd4.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-4314bd4/SHA256SUMS-win-4314bd4.txt)
 
 ## Before you install: your Twin needs an AI to think with
 
@@ -40,7 +40,7 @@ No administrator rights are needed. The Torus starts by itself when you sign in 
 **If Windows refuses with no Run anyway button**, your PC has Smart App Control switched on, which is common on new Windows 11 computers. Open PowerShell and unblock the extracted folder, then double-click **install** again (type the folder name as it appears in your Downloads):
 
 ```
-gci ~\Downloads\torus-win-x64-f1e31ff -r | Unblock-File
+gci ~\Downloads\torus-win-x64-4314bd4 -r | Unblock-File
 ```
 
 **A plain empty window appears while the Torus runs. Leave it open** (minimise it). On this beta that window is the Torus; closing it stops your Twins. If it does get closed, `schtasks /run /tn "Torus Serve"` in PowerShell brings the Torus back.
@@ -48,8 +48,11 @@ gci ~\Downloads\torus-win-x64-f1e31ff -r | Unblock-File
 ## Install on a Mac
 
 1. Download the archive for your Mac and double-click it to unpack.
-2. Open Terminal, type `bash ` (with the space), drag **install.sh** from the unpacked folder into the Terminal window, and press Return.
-3. Answer the two questions. Settings opens in your browser; follow the banner to Install-Buddy.
+2. Open the unpacked folder and double-click **Install Torus.command**. It opens a Terminal window and runs the installer there.
+3. If macOS says it can't be opened because the developer is unidentified (this beta is not yet signed), right-click **Install Torus.command**, choose **Open**, then **Open** again.
+4. Answer the two questions. Settings opens in your browser; follow the banner to Install-Buddy.
+
+If you'd rather use a Terminal, `bash install.sh` in the unpacked folder is the same installer.
 
 ## Already have the Torus? Upgrade with the same steps
 
