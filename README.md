@@ -4,15 +4,15 @@ A home for your personal AI Twin: a small program that runs on your own computer
 
 This is a **private beta**. Expect rough edges, and tell us what you hit.
 
-## Download (build 5dc4549)
+## Download (build caecf76)
 
 | Your computer | File |
 |---|---|
-| Windows 10 or 11 | [torus-win-x64-5dc4549.zip](https://github.com/harrybuck/torus-core/releases/download/beta-5dc4549/torus-win-x64-5dc4549.zip) |
-| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-5dc4549.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-5dc4549/torus-mac-arm64-5dc4549.tar.gz) |
-| Mac with an Intel processor | [torus-mac-x64-5dc4549.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-5dc4549/torus-mac-x64-5dc4549.tar.gz) |
+| Windows 10 or 11 | [torus-win-x64-caecf76.zip](https://github.com/harrybuck/torus-core/releases/download/beta-caecf76/torus-win-x64-caecf76.zip) |
+| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-caecf76.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-caecf76/torus-mac-arm64-caecf76.tar.gz) |
+| Mac with an Intel processor | [torus-mac-x64-caecf76.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-caecf76/torus-mac-x64-caecf76.tar.gz) |
 
-Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-5dc4549/SHA256SUMS-5dc4549.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-5dc4549/SHA256SUMS-win-5dc4549.txt)
+Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-caecf76/SHA256SUMS-caecf76.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-caecf76/SHA256SUMS-win-caecf76.txt)
 
 ## Before you install: your Twin needs an AI to think with
 
@@ -20,7 +20,7 @@ Install **one** of these first, and sign in to it with your own account.
 
 **Claude Code** (needs a paid Claude plan). This is the command-line program, not the Claude Desktop app; Desktop is fine to have, but the Torus cannot use it.
 
-- Windows: open PowerShell and paste `irm https://claude.ai/install.ps1 | iex`
+- Windows: the Torus can install it for you from the Setup card (Install Claude Code). Or open PowerShell and paste `irm https://claude.ai/install.ps1 | iex`
 - Mac: open Terminal and paste `curl -fsSL https://claude.ai/install.sh | bash`
 
 On Windows the installer may warn that its folder is not in your PATH, and typing `claude` may then fail in red. **That is fine.** The Torus finds it anyway. To sign in, paste `& "$env:USERPROFILE\.local\bin\claude.exe"`, follow the browser, then type `/exit`.
@@ -35,12 +35,14 @@ On Windows the installer may warn that its folder is not in your PATH, and typin
 4. Answer the two questions: your name, and where your data should live (press Enter for a Torus folder in your user folder).
 5. Settings opens in your browser. Follow the banner to **Install-Buddy**, who confirms everything works and helps you create your own Twin.
 
+**Moving from the Obsidian-era Torus?** Tell Install-Buddy. He finds your old vault, tells you what he found, and on your go brings the old conversations into your new Twin's memory and every note and idea into the Library. Nothing in the old vault is changed or deleted.
+
 No administrator rights are needed. The Torus starts by itself when you sign in to Windows, and a **Torus** shortcut appears on your Desktop.
 
 **If Windows refuses with no Run anyway button**, your PC has Smart App Control switched on, which is common on new Windows 11 computers. Open PowerShell and unblock the extracted folder, then double-click **install** again (type the folder name as it appears in your Downloads):
 
 ```
-gci ~\Downloads\torus-win-x64-5dc4549 -r | Unblock-File
+gci ~\Downloads\torus-win-x64-caecf76 -r | Unblock-File
 ```
 
 **No window while the Torus runs.** From this build the Torus and its memory jobs run with no window on any account. If the Torus ever stops, the half-hourly memory job starts it again; `schtasks /run /tn "Torus Serve"` in PowerShell starts it at once.
