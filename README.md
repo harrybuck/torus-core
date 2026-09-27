@@ -4,15 +4,15 @@ A home for your personal AI Twin: a small program that runs on your own computer
 
 This is a **private beta**. Expect rough edges, and tell us what you hit.
 
-## Download (build caecf76)
+## Download (build 005af23)
 
 | Your computer | File |
 |---|---|
-| Windows 10 or 11 | [torus-win-x64-caecf76.zip](https://github.com/harrybuck/torus-core/releases/download/beta-caecf76/torus-win-x64-caecf76.zip) |
-| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-caecf76.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-caecf76/torus-mac-arm64-caecf76.tar.gz) |
-| Mac with an Intel processor | [torus-mac-x64-caecf76.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-caecf76/torus-mac-x64-caecf76.tar.gz) |
+| Windows 10 or 11 | [torus-win-x64-005af23.zip](https://github.com/harrybuck/torus-core/releases/download/beta-005af23/torus-win-x64-005af23.zip) |
+| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-005af23.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-005af23/torus-mac-arm64-005af23.tar.gz) |
+| Mac with an Intel processor | [torus-mac-x64-005af23.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-005af23/torus-mac-x64-005af23.tar.gz) |
 
-Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-caecf76/SHA256SUMS-caecf76.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-caecf76/SHA256SUMS-win-caecf76.txt)
+Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-005af23/SHA256SUMS-005af23.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-005af23/SHA256SUMS-win-005af23.txt)
 
 ## Before you install: your Twin needs an AI to think with
 
@@ -42,7 +42,7 @@ No administrator rights are needed. The Torus starts by itself when you sign in 
 **If Windows refuses with no Run anyway button**, your PC has Smart App Control switched on, which is common on new Windows 11 computers. Open PowerShell and unblock the extracted folder, then double-click **install** again (type the folder name as it appears in your Downloads):
 
 ```
-gci ~\Downloads\torus-win-x64-caecf76 -r | Unblock-File
+gci ~\Downloads\torus-win-x64-005af23 -r | Unblock-File
 ```
 
 **No window while the Torus runs.** From this build the Torus and its memory jobs run with no window on any account. If the Torus ever stops, the half-hourly memory job starts it again; `schtasks /run /tn "Torus Serve"` in PowerShell starts it at once.
@@ -55,6 +55,16 @@ gci ~\Downloads\torus-win-x64-caecf76 -r | Unblock-File
 4. Answer the two questions. Settings opens in your browser; follow the banner to Install-Buddy.
 
 If you'd rather use a Terminal, `bash install.sh` in the unpacked folder is the same installer.
+
+## Reach the Torus from your phone
+
+The Torus listens only on the computer it runs on. To reach it from a phone, put that computer on a [Tailscale](https://tailscale.com) network and open a Funnel to the Torus's remote port; the Torus then serves your phone over a real HTTPS address, and pairs it by QR code.
+
+1. Install Tailscale on the computer that runs the Torus and sign in. On Windows, also choose **Run unattended** in Tailscale's tray menu, so the tunnel survives you signing out, and keep the PC awake.
+2. In a terminal (PowerShell on Windows) run `tailscale funnel --bg 8850`. The first time, Tailscale prints a link to switch Funnel on for your network; follow it once. The command prints your Torus's public address, which looks like `https://<name>.<tailnet>.ts.net`.
+3. Open the Torus Settings page, scroll to **Remote access**, paste that address and save. Type a name for your phone and press **Pair**, then scan the QR code with the phone's camera and tap **Open Torus**. Add it to your home screen from the share menu if you like.
+
+A Mac also offers a share-sheet Shortcut for saving links; on Windows, paste links into Capture instead.
 
 ## Already have the Torus? Upgrade with the same steps
 
