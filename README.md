@@ -4,15 +4,15 @@ A home for your personal AI Twin: a small program that runs on your own computer
 
 This is a **private beta**. Expect rough edges, and tell us what you hit.
 
-## Download (build 005af23)
+## Download (build d50eff3)
 
 | Your computer | File |
 |---|---|
-| Windows 10 or 11 | [torus-win-x64-005af23.zip](https://github.com/harrybuck/torus-core/releases/download/beta-005af23/torus-win-x64-005af23.zip) |
-| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-005af23.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-005af23/torus-mac-arm64-005af23.tar.gz) |
-| Mac with an Intel processor | [torus-mac-x64-005af23.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-005af23/torus-mac-x64-005af23.tar.gz) |
+| Windows 10 or 11 | [torus-win-x64-d50eff3.zip](https://github.com/harrybuck/torus-core/releases/download/beta-d50eff3/torus-win-x64-d50eff3.zip) |
+| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-d50eff3.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-d50eff3/torus-mac-arm64-d50eff3.tar.gz) |
+| Mac with an Intel processor | [torus-mac-x64-d50eff3.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-d50eff3/torus-mac-x64-d50eff3.tar.gz) |
 
-Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-005af23/SHA256SUMS-005af23.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-005af23/SHA256SUMS-win-005af23.txt)
+Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-d50eff3/SHA256SUMS-d50eff3.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-d50eff3/SHA256SUMS-win-d50eff3.txt)
 
 ## Before you install: your Twin needs an AI to think with
 
@@ -25,7 +25,7 @@ Install **one** of these first, and sign in to it with your own account.
 
 On Windows the installer may warn that its folder is not in your PATH, and typing `claude` may then fail in red. **That is fine.** The Torus finds it anyway. To sign in, paste `& "$env:USERPROFILE\.local\bin\claude.exe"`, follow the browser, then type `/exit`.
 
-**Codex** (needs a paid ChatGPT plan): `npm install -g @openai/codex`, then `codex login`. On Windows use this npm version; the Codex inside the ChatGPT Store app cannot be started by other programs.
+**Codex** (needs a paid ChatGPT plan). On Windows, the Codex app from the Microsoft Store is enough: install it, sign in, and the Torus uses the Codex inside it (September 2026 build or later; an older Store build refuses to be started by other programs, and updating it fixes that). On a Mac, the ChatGPT app is enough the same way. Or, on either, install the command-line Codex with `npm install -g @openai/codex` and `codex login`; the Torus prefers that copy when both are present. If you have a working Codex somewhere else, give its path on the Setup card.
 
 ## Install on Windows
 
@@ -42,7 +42,7 @@ No administrator rights are needed. The Torus starts by itself when you sign in 
 **If Windows refuses with no Run anyway button**, your PC has Smart App Control switched on, which is common on new Windows 11 computers. Open PowerShell and unblock the extracted folder, then double-click **install** again (type the folder name as it appears in your Downloads):
 
 ```
-gci ~\Downloads\torus-win-x64-005af23 -r | Unblock-File
+gci ~\Downloads\torus-win-x64-d50eff3 -r | Unblock-File
 ```
 
 **No window while the Torus runs.** From this build the Torus and its memory jobs run with no window on any account. If the Torus ever stops, the half-hourly memory job starts it again; `schtasks /run /tn "Torus Serve"` in PowerShell starts it at once.
