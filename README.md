@@ -4,15 +4,15 @@ A home for your personal AI Twin: a small program that runs on your own computer
 
 This is a **private beta**. Expect rough edges, and tell us what you hit.
 
-## Download (build d50eff3)
+## Download (build c0f4d77)
 
 | Your computer | File |
 |---|---|
-| Windows 10 or 11 | [torus-win-x64-d50eff3.zip](https://github.com/harrybuck/torus-core/releases/download/beta-d50eff3/torus-win-x64-d50eff3.zip) |
-| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-d50eff3.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-d50eff3/torus-mac-arm64-d50eff3.tar.gz) |
-| Mac with an Intel processor | [torus-mac-x64-d50eff3.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-d50eff3/torus-mac-x64-d50eff3.tar.gz) |
+| Windows 10 or 11 | [torus-win-x64-c0f4d77.zip](https://github.com/harrybuck/torus-core/releases/download/beta-c0f4d77/torus-win-x64-c0f4d77.zip) |
+| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-c0f4d77.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-c0f4d77/torus-mac-arm64-c0f4d77.tar.gz) |
+| Mac with an Intel processor | [torus-mac-x64-c0f4d77.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-c0f4d77/torus-mac-x64-c0f4d77.tar.gz) |
 
-Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-d50eff3/SHA256SUMS-d50eff3.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-d50eff3/SHA256SUMS-win-d50eff3.txt)
+Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-c0f4d77/SHA256SUMS-c0f4d77.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-c0f4d77/SHA256SUMS-win-c0f4d77.txt)
 
 ## Before you install: your Twin needs an AI to think with
 
@@ -42,7 +42,7 @@ No administrator rights are needed. The Torus starts by itself when you sign in 
 **If Windows refuses with no Run anyway button**, your PC has Smart App Control switched on, which is common on new Windows 11 computers. Open PowerShell and unblock the extracted folder, then double-click **install** again (type the folder name as it appears in your Downloads):
 
 ```
-gci ~\Downloads\torus-win-x64-d50eff3 -r | Unblock-File
+gci ~\Downloads\torus-win-x64-c0f4d77 -r | Unblock-File
 ```
 
 **No window while the Torus runs.** From this build the Torus and its memory jobs run with no window on any account. If the Torus ever stops, the half-hourly memory job starts it again; `schtasks /run /tn "Torus Serve"` in PowerShell starts it at once.
@@ -65,6 +65,12 @@ The Torus listens only on the computer it runs on. To reach it from a phone, put
 3. Open the Torus Settings page, scroll to **Remote access**, paste that address and save. Type a name for your phone and press **Pair**, then scan the QR code with the phone's camera and tap **Open Torus**. Add it to your home screen from the share menu if you like.
 
 A Mac also offers a share-sheet Shortcut for saving links; on Windows, paste links into Capture instead.
+
+## Give your Twin an email address
+
+Each Twin can read and send email as himself. Open his page from the Twins table in Settings and scroll to **Email**. He can share the email bridge account, have an account of his own, or none. For his own account, create a Gmail for him, turn on 2-Step Verification, make an app password (the page folds the exact steps), and enter the address and that password. Then list, under **Only respond to emails from these accounts**, the people he may answer, turn on **Poll for mail**, and turn on **Respond automatically** if he should answer without you.
+
+He checks that inbox every three minutes. Mail from a listed person reaches him in his room; with Respond automatically on he replies by email and posts one line in his room saying who wrote, what they asked and what he answered. Mail from anyone else is left unread and never reaches him. One email gets one reply, never a reply to a bounce, an auto-reply or a mailing list; several new mails from one person become one reply; and every mail he receives is kept as a note on his Mail shelf in the Library.
 
 ## Already have the Torus? Upgrade with the same steps
 
