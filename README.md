@@ -4,17 +4,17 @@ A home for your personal AI Twin: a small program that runs on your own computer
 
 This is a **private beta**. Expect rough edges, and tell us what you hit.
 
-## Download (build ba9f95a)
+## Download (build 455bf76)
 
 | Your computer | File |
 |---|---|
-| Windows 10 or 11 | [torus-win-x64-ba9f95a.zip](https://github.com/harrybuck/torus-core/releases/download/beta-ba9f95a/torus-win-x64-ba9f95a.zip) |
-| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-ba9f95a.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-ba9f95a/torus-mac-arm64-ba9f95a.tar.gz) |
-| Mac with an Intel processor | [torus-mac-x64-ba9f95a.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-ba9f95a/torus-mac-x64-ba9f95a.tar.gz) |
+| Windows 10 or 11 | [torus-win-x64-455bf76.zip](https://github.com/harrybuck/torus-core/releases/download/beta-455bf76/torus-win-x64-455bf76.zip) |
+| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-455bf76.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-455bf76/torus-mac-arm64-455bf76.tar.gz) |
+| Mac with an Intel processor | [torus-mac-x64-455bf76.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-455bf76/torus-mac-x64-455bf76.tar.gz) |
 
-Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-ba9f95a/SHA256SUMS-ba9f95a.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-ba9f95a/SHA256SUMS-win-ba9f95a.txt)
+Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-455bf76/SHA256SUMS-455bf76.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-455bf76/SHA256SUMS-win-455bf76.txt)
 
-[What changed since build 3484a77](https://github.com/harrybuck/torus-core/releases/tag/beta-ba9f95a) · [Recovery steps for failed enrichment](#if-captures-are-waiting-for-enrichment)
+[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [What changed since build 3484a77](https://github.com/harrybuck/torus-core/releases/tag/beta-455bf76) · [Recovery steps for failed enrichment](#if-captures-are-waiting-for-enrichment)
 
 ## Before you install: your Twin needs an AI to think with
 
@@ -44,7 +44,7 @@ No administrator rights are needed. The Torus starts by itself when you sign in 
 **If Windows refuses with no Run anyway button**, your PC has Smart App Control switched on, which is common on new Windows 11 computers. Open PowerShell and unblock the extracted folder, then double-click **install** again (type the folder name as it appears in your Downloads):
 
 ```
-gci ~\Downloads\torus-win-x64-ba9f95a -r | Unblock-File
+gci ~\Downloads\torus-win-x64-455bf76 -r | Unblock-File
 ```
 
 **No window while the Torus runs.** The Torus and its memory jobs run with no window on any account. If the Torus ever stops, the half-hourly memory job starts it again; `schtasks /run /tn "Torus Serve"` in PowerShell starts it at once.
@@ -80,9 +80,17 @@ Tell your Twin what to do and when, in his room, and he sets it up as a schedule
 
 ## Already have the Torus? Upgrade with the same steps
 
-Download the new build and install it exactly as above. The installer sees your existing Torus, says it will upgrade, and replaces only the application. Your data folder, your Twins, their memory and their sign-ins are not touched: every one of your files is fingerprinted before and after, and the installer tells you how many it checked and that none changed. If anything about your data did change, the upgrade stops and puts the previous application back. The previous application is kept beside the new one until the next upgrade.
+You can upgrade directly from an earlier build; there is no need to install intermediate releases. Use the same computer and user account as before. Do not uninstall the Torus or remove its data folder.
 
-After upgrading, open your Twin's room. If a message had failed before the upgrade, press **Retry** on it.
+1. Let active Twin turns and other work finish: the upgrade stops the Torus briefly.
+2. Download the new package for your computer. On **Windows**, right-click the zip, choose **Extract All**, then open the extracted folder and run **install.cmd** (shown as **install** if file extensions are hidden). On a **Mac**, unpack the archive for Apple silicon or Intel, then open **Install Torus.command**. Use the unsigned-beta opening steps above if your computer asks.
+3. The installer recognises the existing installation and says it will upgrade. You should not need to create another Twin, choose a new data folder, or repeat setup. If it unexpectedly asks for a fresh installation, stop and report that instead of creating a second one.
+4. Wait for the completion message: **Torus upgraded from … to …**, followed by the number of files checked before and after. Keep the installer window open until it finishes. Browser and phone connections may drop while the Torus restarts.
+5. Reopen your usual Torus bookmark or refresh the page. Your existing Twins, chats and Library should be there. Sign-ins are retained; reconnect only if a provider reports that a sign-in has expired. If an earlier chat message failed, use **Retry** on that message.
+
+The installer checks your content before and after replacement and reports that it has not changed. It refreshes the Twins' tool wiring and Install-Buddy's generated instructions. The previous application is kept until the next upgrade, and the upgrader attempts to restore it if replacement fails. If the installer reports an error, keep the message and ask for help; do not delete your data or start over.
+
+For captures that failed on a Codex-only installation, follow **If captures are waiting for enrichment** below after upgrading. The upgrade adds recovery controls but does not silently overwrite an older saved Claude choice.
 
 ## Keeping the AI tools up to date
 
