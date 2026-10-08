@@ -4,15 +4,17 @@ A home for your personal AI Twin: a small program that runs on your own computer
 
 This is a **private beta**. Expect rough edges, and tell us what you hit.
 
-## Download (build 3484a77)
+## Download (build ba9f95a)
 
 | Your computer | File |
 |---|---|
-| Windows 10 or 11 | [torus-win-x64-3484a77.zip](https://github.com/harrybuck/torus-core/releases/download/beta-3484a77/torus-win-x64-3484a77.zip) |
-| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-3484a77.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-3484a77/torus-mac-arm64-3484a77.tar.gz) |
-| Mac with an Intel processor | [torus-mac-x64-3484a77.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-3484a77/torus-mac-x64-3484a77.tar.gz) |
+| Windows 10 or 11 | [torus-win-x64-ba9f95a.zip](https://github.com/harrybuck/torus-core/releases/download/beta-ba9f95a/torus-win-x64-ba9f95a.zip) |
+| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-ba9f95a.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-ba9f95a/torus-mac-arm64-ba9f95a.tar.gz) |
+| Mac with an Intel processor | [torus-mac-x64-ba9f95a.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-ba9f95a/torus-mac-x64-ba9f95a.tar.gz) |
 
-Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-3484a77/SHA256SUMS-3484a77.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-3484a77/SHA256SUMS-win-3484a77.txt)
+Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-ba9f95a/SHA256SUMS-ba9f95a.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-ba9f95a/SHA256SUMS-win-ba9f95a.txt)
+
+[What changed since build 3484a77](https://github.com/harrybuck/torus-core/releases/tag/beta-ba9f95a) · [Recovery steps for failed enrichment](#if-captures-are-waiting-for-enrichment)
 
 ## Before you install: your Twin needs an AI to think with
 
@@ -42,10 +44,10 @@ No administrator rights are needed. The Torus starts by itself when you sign in 
 **If Windows refuses with no Run anyway button**, your PC has Smart App Control switched on, which is common on new Windows 11 computers. Open PowerShell and unblock the extracted folder, then double-click **install** again (type the folder name as it appears in your Downloads):
 
 ```
-gci ~\Downloads\torus-win-x64-3484a77 -r | Unblock-File
+gci ~\Downloads\torus-win-x64-ba9f95a -r | Unblock-File
 ```
 
-**No window while the Torus runs.** From this build the Torus and its memory jobs run with no window on any account. If the Torus ever stops, the half-hourly memory job starts it again; `schtasks /run /tn "Torus Serve"` in PowerShell starts it at once.
+**No window while the Torus runs.** The Torus and its memory jobs run with no window on any account. If the Torus ever stops, the half-hourly memory job starts it again; `schtasks /run /tn "Torus Serve"` in PowerShell starts it at once.
 
 ## Install on a Mac
 
@@ -70,7 +72,7 @@ A Mac also offers a share-sheet Shortcut for saving links; on Windows, paste lin
 
 Each Twin can read and send email as himself. Open his page from the Twins table in Settings and scroll to **Email**. He can share the email bridge account, have an account of his own, or none. For his own account, create a Gmail for him, turn on 2-Step Verification, make an app password (the page folds the exact steps), and enter the address and that password. Then list, under **Only respond to emails from these accounts**, the people he may answer, turn on **Poll for mail**, and turn on **Respond automatically** if he should answer without you.
 
-He checks that inbox every three minutes. Mail from a listed person reaches him in his room; with Respond automatically on he replies by email and posts one line in his room saying who wrote, what they asked and what he answered. Mail from anyone else is left unread and never reaches him. One email gets one reply, never a reply to a bounce, an auto-reply or a mailing list; several new mails from one person become one reply; and every mail he receives is kept as a note on his Mail shelf in the Library.
+He checks that inbox every three minutes. Mail from a listed person reaches him in his room; with Respond automatically on he replies by email and posts one line in his room saying who wrote, what they asked and what he answered. Mail from anyone else is left unread and never reaches him. One email gets one reply, never a reply to a bounce, an auto-reply or a mailing list; several new mails from one person become one reply. Incoming Twin mail stays in the email conversation; it is not automatically captured into the Library.
 
 ## Ask your Twin to do something on a schedule
 
@@ -81,6 +83,22 @@ Tell your Twin what to do and when, in his room, and he sets it up as a schedule
 Download the new build and install it exactly as above. The installer sees your existing Torus, says it will upgrade, and replaces only the application. Your data folder, your Twins, their memory and their sign-ins are not touched: every one of your files is fingerprinted before and after, and the installer tells you how many it checked and that none changed. If anything about your data did change, the upgrade stops and puts the previous application back. The previous application is kept beside the new one until the next upgrade.
 
 After upgrading, open your Twin's room. If a message had failed before the upgrade, press **Retry** on it.
+
+## Keeping the AI tools up to date
+
+The Torus checks for Claude Code and Codex updates daily. Open **Settings → Harnesses → Updates** to check now, read the available release information, and choose **Update when idle**. It checks automatically but only installs an update you approve. It shows newly introduced models when the release information identifies them; it does not promise account access to every announced model. After a successful update it refreshes the model list.
+
+Updating Claude Desktop does not necessarily update the Claude Code executable the Torus uses. Updates supplied inside a desktop or editor app may need that app's own updater; the Torus shows the appropriate instructions.
+
+## If captures are waiting for enrichment
+
+Open **Settings → Enrichment**. New automatic choices follow installed harnesses enabled for your Twins. If an older installation saved Claude on a Codex-only computer, choose an available Codex model and a Twin with Codex enabled, then press **Save changes**. Alternatively choose Automatic for both fields. Older saved choices are preserved for you to correct rather than silently changed.
+
+Open **Capture → Prior capture activity**, retry one affected note, and check the result before retrying the rest. The original notes remain intact; do not delete and recapture them. Unavailable harnesses and sign-in failures now hold work with an explanation instead of cancelling each capture.
+
+## Restart as a last resort
+
+**Settings → Status → Restart Torus…** asks for confirmation, restarts the Torus, and reconnects the browser when it returns. A restart interrupts running work, so finish it first when possible. It does not restart Tailscale or repair an offline network connection. If the Torus cannot serve Settings at all, use the operating system's service controls or restart the computer.
 
 ## Where things live
 
