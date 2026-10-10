@@ -1,8 +1,20 @@
-# Torus beta — build 455bf76
-
 # Changes since build 3484a77 (30 September 2026)
 
 This is a cumulative update for Windows 10/11, Apple-silicon Macs and Intel Macs. Install it the same way as the earlier build: it upgrades in place and retains your data, Twins, memory and sign-ins. You can skip intermediate builds.
+
+## Added after 455bf76 — awaiting the next packaged release
+
+The current download is **455bf76**. The following changes are committed in **938e4c8**, but are not included in that download. The published changes and upgrade instructions follow below.
+
+- **X-Digest recovers from temporary connection failures.** Network failures, temporary X service errors and rate limits now wait and retry with increasing intervals instead of permanently stopping after three attempts. Invalid credentials and persistent processing errors still require attention.
+- **Large digests are processed in saved batches.** The worker assesses at most 25 posts at a time, with smaller batches for longer posts. Valid assessments survive retries and restarts. Code builds the checklist and links, and checks quotes against the source. Pending scans retain all scored posts, including those set aside by the previous size cap; users do not need to delete or recapture them.
+- **Recovery no longer looks like being caught up.** The schedule distinguishes the last successful run from the date through which posts have been covered, and shows saved batch progress. After completing an older scan, the task continues catching up automatically.
+
+These changes matter to installations using the scheduled X-Digest routine. They do not require a new Twin, new X credentials or changes to the watchlist. A task already marked blocked must be resumed after upgrading; automatic retry applies once the task is active and the underlying cause is temporary.
+
+Validation for this addition: 873 tests passed, zero failed, with nine package-dependent tests skipped. Two live batches saved 46 of 685 assessments from an existing backlog; that demonstrated checkpoint recovery, not completion of the whole backlog. New downloadable packages have not yet been built for this addition.
+
+## Included in published build 455bf76
 
 ## Fixes
 
@@ -43,10 +55,12 @@ An old saved Claude choice is not automatically overwritten: earlier versions di
 2. Press Save changes.
 3. Open Capture → Prior capture activity. Retry one cancelled or held note and check that it finishes, then retry the remaining affected notes. Keep the existing notes; there is no need to delete and recapture them.
 
+If you already corrected these settings and successfully enriched a note, keep those working settings and retry only the remaining failed notes.
+
 If upgrading from a build earlier than 3484a77, this also includes automatic separation from adopted old Obsidian folders, Copy me (Off/CC/BCC), copied-only email handling, and the corrected Library-search and Gmail app-password wording from that release.
 
-## Validation and limits
+## Published build validation and limits
 
 The application suite passed 868 tests with zero failures (nine package-dependent tests were skipped in that run). All 18 deliberate breaks of the new background-selection and recovery rules were caught. Release packages are additionally checked during packaging. The Codex-only Windows scenario was covered by controlled fixtures; this is not a claim that the release has already run on Boro's computer. This beta is not yet code-signed.
 
-Packaging verification for this build: all 34 installer/package checks passed with no skips. Every manifest-listed file was verified in the Windows, Apple-silicon and Intel packages; SHA-256 checksums accompany the downloads.
+Packaging verification for published build 455bf76: all 34 installer/package checks passed with no skips. Every manifest-listed file was verified in the Windows, Apple-silicon and Intel packages; SHA-256 checksums accompany those downloads.

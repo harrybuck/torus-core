@@ -14,7 +14,7 @@ This is a **private beta**. Expect rough edges, and tell us what you hit.
 
 Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-455bf76/SHA256SUMS-455bf76.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-455bf76/SHA256SUMS-win-455bf76.txt)
 
-[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [What changed since build 3484a77](https://github.com/harrybuck/torus-core/releases/tag/beta-455bf76) · [Recovery steps for failed enrichment](#if-captures-are-waiting-for-enrichment)
+[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [Cumulative changes and next-release additions](RELEASE_NOTES.md) · [Published build 455bf76 notes](https://github.com/harrybuck/torus-core/releases/tag/beta-455bf76) · [Recovery steps for failed enrichment](#if-captures-are-waiting-for-enrichment)
 
 ## Before you install: your Twin needs an AI to think with
 
