@@ -1,3 +1,8 @@
+# Changes since build 9bdfcef (14 November 2026)
+
+- **The Claude sign-in window now opens on Windows.** Pressing Open on the Claude sign-in page used to start the window out of sight, so nothing seemed to happen. It now appears on your desktop. If your computer refuses, the page offers the same sign-in as a file to open yourself.
+- **The download table says what to do with each file:** on Windows, Extract All rather than Open file; on a Mac, unpack and open the installer.
+
 # Changes since build d3fc051 (14 November 2026)
 
 From a second round of test installs on a fresh Windows computer. It upgrades in place and keeps your data, Twins, memory, chats and sign-ins.

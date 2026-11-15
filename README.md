@@ -4,17 +4,17 @@ A home for your personal AI Twin: a small program that runs on your own computer
 
 This is a **beta**. Expect rough edges. When something goes wrong or confuses you, [open an issue](https://github.com/harrybuck/torus-core/issues/new) and say what you did and what you saw.
 
-## Download (build 9bdfcef)
+## Download (build c337427)
 
-| Your computer | File |
-|---|---|
-| Windows 10 or 11 | [torus-win-x64-9bdfcef.zip](https://github.com/harrybuck/torus-core/releases/download/beta-9bdfcef/torus-win-x64-9bdfcef.zip) |
-| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-9bdfcef.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-9bdfcef/torus-mac-arm64-9bdfcef.tar.gz) |
-| Mac with an Intel processor | [torus-mac-x64-9bdfcef.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-9bdfcef/torus-mac-x64-9bdfcef.tar.gz) |
+| Your computer | File | Then |
+|---|---|---|
+| Windows 10 or 11 | [torus-win-x64-c337427.zip](https://github.com/harrybuck/torus-core/releases/download/beta-c337427/torus-win-x64-c337427.zip) | Use **Extract All** on this file, not **Open file**: the installer can't run from inside the zip. |
+| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-c337427.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-c337427/torus-mac-arm64-c337427.tar.gz) | Double-click it to unpack, then right-click **Install Torus.command** and choose **Open** (this beta is not yet signed). |
+| Mac with an Intel processor | [torus-mac-x64-c337427.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-c337427/torus-mac-x64-c337427.tar.gz) | Double-click it to unpack, then right-click **Install Torus.command** and choose **Open** (this beta is not yet signed). |
 
-Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-9bdfcef/SHA256SUMS-9bdfcef.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-9bdfcef/SHA256SUMS-win-9bdfcef.txt)
+Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-c337427/SHA256SUMS-c337427.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-c337427/SHA256SUMS-win-c337427.txt)
 
-[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [Changes in each build](RELEASE_NOTES.md) · [Build 9bdfcef release page](https://github.com/harrybuck/torus-core/releases/tag/beta-9bdfcef)
+[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [Changes in each build](RELEASE_NOTES.md) · [Build c337427 release page](https://github.com/harrybuck/torus-core/releases/tag/beta-c337427)
 
 ## What you'll need
 
@@ -37,7 +37,7 @@ No administrator rights are needed. The Torus starts by itself when you sign in 
 **If Windows refuses with no Run anyway button**, your PC has Smart App Control switched on, which is common on new Windows 11 computers. Open PowerShell and unblock the extracted folder, then double-click **install** again (type the folder name as it appears in your Downloads):
 
 ```
-gci ~\Downloads\torus-win-x64-9bdfcef -r | Unblock-File
+gci ~\Downloads\torus-win-x64-c337427 -r | Unblock-File
 ```
 
 **No window while the Torus runs.** The Torus and its memory jobs run with no window on any account. If the Torus ever stops, the half-hourly memory job starts it again; `schtasks /run /tn "Torus Serve"` in PowerShell starts it at once.
