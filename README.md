@@ -4,17 +4,17 @@ A home for your personal AI Twin: a small program that runs on your own computer
 
 This is a **beta**. Expect rough edges. When something goes wrong or confuses you, [open an issue](https://github.com/harrybuck/torus-core/issues/new) and say what you did and what you saw.
 
-## Download (build d3fc051)
+## Download (build 9bdfcef)
 
 | Your computer | File |
 |---|---|
-| Windows 10 or 11 | [torus-win-x64-d3fc051.zip](https://github.com/harrybuck/torus-core/releases/download/beta-d3fc051/torus-win-x64-d3fc051.zip) |
-| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-d3fc051.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-d3fc051/torus-mac-arm64-d3fc051.tar.gz) |
-| Mac with an Intel processor | [torus-mac-x64-d3fc051.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-d3fc051/torus-mac-x64-d3fc051.tar.gz) |
+| Windows 10 or 11 | [torus-win-x64-9bdfcef.zip](https://github.com/harrybuck/torus-core/releases/download/beta-9bdfcef/torus-win-x64-9bdfcef.zip) |
+| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-9bdfcef.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-9bdfcef/torus-mac-arm64-9bdfcef.tar.gz) |
+| Mac with an Intel processor | [torus-mac-x64-9bdfcef.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-9bdfcef/torus-mac-x64-9bdfcef.tar.gz) |
 
-Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-d3fc051/SHA256SUMS-d3fc051.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-d3fc051/SHA256SUMS-win-d3fc051.txt)
+Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-9bdfcef/SHA256SUMS-9bdfcef.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-9bdfcef/SHA256SUMS-win-9bdfcef.txt)
 
-[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [Changes in each build](RELEASE_NOTES.md) · [Build d3fc051 release page](https://github.com/harrybuck/torus-core/releases/tag/beta-d3fc051)
+[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [Changes in each build](RELEASE_NOTES.md) · [Build 9bdfcef release page](https://github.com/harrybuck/torus-core/releases/tag/beta-9bdfcef)
 
 ## What you'll need
 
@@ -24,7 +24,7 @@ The Torus also works with **Grok Bots**, as an optional extra seat for a Twin: t
 
 ## Install on Windows
 
-1. Download the zip. Right-click it and choose **Extract All**. Do not run anything from inside the zip.
+1. Download the zip. In the browser's download list, **don't press Open file**: that only looks inside the zip, and the installer can't run from there. Press the folder icon beside it instead (or open your Downloads folder), then right-click the zip and choose **Extract All**.
 2. Open the extracted folder and double-click **install**.
 3. Windows may show a blue *Windows protected your PC* box, because this beta is not yet code-signed. Choose **More info**, then **Run anyway**.
 4. Answer the two questions: your name, and where your data should live (press Enter for a Torus folder in your user folder).
@@ -37,7 +37,7 @@ No administrator rights are needed. The Torus starts by itself when you sign in 
 **If Windows refuses with no Run anyway button**, your PC has Smart App Control switched on, which is common on new Windows 11 computers. Open PowerShell and unblock the extracted folder, then double-click **install** again (type the folder name as it appears in your Downloads):
 
 ```
-gci ~\Downloads\torus-win-x64-d3fc051 -r | Unblock-File
+gci ~\Downloads\torus-win-x64-9bdfcef -r | Unblock-File
 ```
 
 **No window while the Torus runs.** The Torus and its memory jobs run with no window on any account. If the Torus ever stops, the half-hourly memory job starts it again; `schtasks /run /tn "Torus Serve"` in PowerShell starts it at once.

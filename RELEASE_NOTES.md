@@ -1,3 +1,16 @@
+# Changes since build d3fc051 (14 November 2026)
+
+From a second round of test installs on a fresh Windows computer. It upgrades in place and keeps your data, Twins, memory, chats and sign-ins.
+
+- **One Claude sign-in for every Twin.** Sign in to Claude once, on its own page in Settings, and every Twin uses it, including ones you create later. It lasts a year, and the page tells you when to renew. Before, each new Twin needed a sign-in of its own and failed its first message without one.
+- **Settings opens with Get started.** One row for each AI, with a plain status and one button for the next step, and Git shown only on Windows when Claude Code needs it. Once you're set up it shrinks to one line. Everything technical (the full checks, harnesses, usage, projects, automation and schedules) is folded under **Advanced** at the bottom.
+- **Installing your AI talks to you.** The Install button answers the click at once, and the page moves on by itself when the installer finishes, straight to signing in. Nothing asks you to press Recheck.
+- **A new Twin opens in a chat.** Creating a Twin takes you into a room with it, named after it, ready for your first message. Install-Buddy links straight to the Create a Twin form.
+- **Signing in for the first time says so**, rather than asking you to "reconnect".
+- **Windows download:** the README and the installer now steer you past the browser's "Open file", which only looks inside the zip, to Extract All.
+
+If you already signed in to Claude for each Twin, nothing breaks; signing in once on the new page simply covers them all.
+
 # Changes since build 9c693a2 (13 November 2026)
 
 A small update from a test install on a fresh Windows computer. It upgrades in place the same way as below.
