@@ -3,6 +3,7 @@
 A small update from a test install on a fresh Windows computer. It upgrades in place the same way as below.
 
 - **No terminal needed for your AI.** The Setup page now has an **Install Codex** button beside **Install Claude Code**, so whichever plan you have, Claude or ChatGPT, the Torus installs the AI for you and you sign in with a button. The README now says so up front, and keeps the manual steps in a fallback section near the end.
+- **A clearer Setup card.** The Install button now stands where "missing" used to be, Sign in appears once, both look like buttons rather than warnings, and each AI's row talks only about that AI.
 - **The installer shows its progress.** Each stage gets its own line, with dots while it waits for the Torus to start, instead of a silent cursor that looked like a hang.
 - **The installer no longer contradicts itself** by saying "No folder to choose" straight after asking where your data should live.
 
