@@ -4,17 +4,17 @@ A home for your personal AI Twin: a small program that runs on your own computer
 
 This is a **beta**. Expect rough edges. When something goes wrong or confuses you, [open an issue](https://github.com/harrybuck/torus-core/issues/new) and say what you did and what you saw.
 
-## Download (build c337427)
+## Download (build da0b4b1)
 
 | Your computer | File | Then |
 |---|---|---|
-| Windows 10 or 11 | [torus-win-x64-c337427.zip](https://github.com/harrybuck/torus-core/releases/download/beta-c337427/torus-win-x64-c337427.zip) | Use **Extract All** on this file, not **Open file**: the installer can't run from inside the zip. |
-| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-c337427.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-c337427/torus-mac-arm64-c337427.tar.gz) | Double-click it to unpack, then right-click **Install Torus.command** and choose **Open** (this beta is not yet signed). |
-| Mac with an Intel processor | [torus-mac-x64-c337427.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-c337427/torus-mac-x64-c337427.tar.gz) | Double-click it to unpack, then right-click **Install Torus.command** and choose **Open** (this beta is not yet signed). |
+| Windows 10 or 11 | [torus-win-x64-da0b4b1.zip](https://github.com/harrybuck/torus-core/releases/download/beta-da0b4b1/torus-win-x64-da0b4b1.zip) | Use **Extract All** on this file, not **Open file**: the installer can't run from inside the zip. |
+| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-da0b4b1.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-da0b4b1/torus-mac-arm64-da0b4b1.tar.gz) | Double-click it to unpack, then right-click **Install Torus.command** and choose **Open** (this beta is not yet signed). |
+| Mac with an Intel processor | [torus-mac-x64-da0b4b1.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-da0b4b1/torus-mac-x64-da0b4b1.tar.gz) | Double-click it to unpack, then right-click **Install Torus.command** and choose **Open** (this beta is not yet signed). |
 
-Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-c337427/SHA256SUMS-c337427.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-c337427/SHA256SUMS-win-c337427.txt)
+Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-da0b4b1/SHA256SUMS-da0b4b1.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-da0b4b1/SHA256SUMS-win-da0b4b1.txt)
 
-[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [Changes in each build](RELEASE_NOTES.md) · [Build c337427 release page](https://github.com/harrybuck/torus-core/releases/tag/beta-c337427)
+[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [Changes in each build](RELEASE_NOTES.md) · [Build da0b4b1 release page](https://github.com/harrybuck/torus-core/releases/tag/beta-da0b4b1)
 
 ## What you'll need
 
@@ -25,7 +25,7 @@ The Torus also works with **Grok Bots**, as an optional extra seat for a Twin: t
 ## Install on Windows
 
 1. Download the zip. In the browser's download list, **don't press Open file**: that only looks inside the zip, and the installer can't run from there. Press the folder icon beside it instead (or open your Downloads folder), then right-click the zip and choose **Extract All**.
-2. Open the extracted folder and double-click **install**.
+2. In the extracted folder, open **Torus-Installer** and double-click **install**.
 3. Windows may show a blue *Windows protected your PC* box, because this beta is not yet code-signed. Choose **More info**, then **Run anyway**.
 4. Answer the two questions: your name, and where your data should live (press Enter for a Torus folder in your user folder).
 5. Settings opens in your browser. On its **Setup** card, press **Install** for your AI (Claude Code or Codex), then **Sign in**. Then follow the banner to **Install-Buddy**, who confirms everything works and helps you create your own Twin.
@@ -37,7 +37,7 @@ No administrator rights are needed. The Torus starts by itself when you sign in 
 **If Windows refuses with no Run anyway button**, your PC has Smart App Control switched on, which is common on new Windows 11 computers. Open PowerShell and unblock the extracted folder, then double-click **install** again (type the folder name as it appears in your Downloads):
 
 ```
-gci ~\Downloads\torus-win-x64-c337427 -r | Unblock-File
+gci ~\Downloads\torus-win-x64-da0b4b1 -r | Unblock-File
 ```
 
 **No window while the Torus runs.** The Torus and its memory jobs run with no window on any account. If the Torus ever stops, the half-hourly memory job starts it again; `schtasks /run /tn "Torus Serve"` in PowerShell starts it at once.
@@ -45,11 +45,11 @@ gci ~\Downloads\torus-win-x64-c337427 -r | Unblock-File
 ## Install on a Mac
 
 1. Download the archive for your Mac and double-click it to unpack.
-2. Open the unpacked folder and double-click **Install Torus.command**. It opens a Terminal window and runs the installer there.
+2. Open the **Torus-Installer** folder it unpacks to and double-click **Install Torus.command**. It opens a Terminal window and runs the installer there.
 3. If macOS says it can't be opened because the developer is unidentified (this beta is not yet signed), right-click **Install Torus.command**, choose **Open**, then **Open** again.
 4. Answer the two questions. Settings opens in your browser. On its **Setup** card, press **Install** for your AI (Claude Code or Codex), then **Sign in**, then follow the banner to Install-Buddy.
 
-If you'd rather use a Terminal, `bash install.sh` in the unpacked folder is the same installer.
+If you'd rather use a Terminal, `bash install.sh` in the Torus-Installer folder is the same installer.
 
 ## Reach the Torus from your phone
 
@@ -89,7 +89,7 @@ On Windows the installer may warn that its folder is not in your PATH, and typin
 You can upgrade directly from an earlier build; there is no need to install intermediate releases. Use the same computer and user account as before. Do not uninstall the Torus or remove its data folder.
 
 1. Let active Twin turns and other work finish: the upgrade stops the Torus briefly.
-2. Download the new package for your computer. On **Windows**, right-click the zip, choose **Extract All**, then open the extracted folder and run **install.cmd** (shown as **install** if file extensions are hidden). On a **Mac**, unpack the archive for Apple silicon or Intel, then open **Install Torus.command**. Use the unsigned-beta opening steps above if your computer asks.
+2. Download the new package for your computer. On **Windows**, right-click the zip, choose **Extract All**, then open **Torus-Installer** in the extracted folder and run **install.cmd** (shown as **install** if file extensions are hidden). On a **Mac**, unpack the archive for Apple silicon or Intel, then open **Install Torus.command**. Use the unsigned-beta opening steps above if your computer asks.
 3. The installer recognises the existing installation and says it will upgrade. You should not need to create another Twin, choose a new data folder, or repeat setup. If it unexpectedly asks for a fresh installation, stop and report that instead of creating a second one.
 4. Wait for the completion message: **Torus upgraded from … to …**, followed by the number of files checked before and after. Keep the installer window open until it finishes. Browser and phone connections may drop while the Torus restarts.
 5. Reopen your usual Torus bookmark or refresh the page. Your existing Twins, chats and Library should be there. Sign-ins are retained; reconnect only if a provider reports that a sign-in has expired. If an earlier chat message failed, use **Retry** on that message.

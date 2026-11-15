@@ -1,3 +1,9 @@
+# Changes since build c337427 (15 November 2026)
+
+- **What to expect when signing in to Claude.** Signing in meets three different codes in a row. The sign-in page now shows them in order with a small drawing each: six digits by email for Claude's page, a long code from Claude's page for the black sign-in window, and the code starting sk-ant- for the Torus.
+- **After signing in, the Torus moves you on**, to Install-Buddy's chat when he's waiting for you, instead of leaving you on a page that only says ready.
+- **The download unpacks to a folder called Torus-Installer**, so the folder you open is named for what it is.
+
 # Changes since build 9bdfcef (14 November 2026)
 
 - **The Claude sign-in window now opens on Windows.** Pressing Open on the Claude sign-in page used to start the window out of sight, so nothing seemed to happen. It now appears on your desktop. If your computer refuses, the page offers the same sign-in as a file to open yourself.
