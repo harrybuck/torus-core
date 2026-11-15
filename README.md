@@ -1,35 +1,26 @@
 # The Torus
 
-A home for your personal AI Twin: a small program that runs on your own computer, keeps your Twin's memory in one folder you own, and opens in your browser. Your Twin works through an AI subscription you already have, Claude or ChatGPT; the Torus adds no cloud service of its own.
+A home for your personal AI Twin: a small program that runs on your own computer, keeps your Twin's memory in one folder you own, and opens in your browser. Your Twin works through an AI subscription you already have, Claude or ChatGPT; the Torus adds no cloud service of its own. You'll need a paid Claude or ChatGPT plan; the Torus's Setup page helps you install your AI.
 
 This is a **beta**. Expect rough edges. When something goes wrong or confuses you, [open an issue](https://github.com/harrybuck/torus-core/issues/new) and say what you did and what you saw.
 
-## Download (build 9c693a2)
+## Download (build d0d1aaa)
 
 | Your computer | File |
 |---|---|
-| Windows 10 or 11 | [torus-win-x64-9c693a2.zip](https://github.com/harrybuck/torus-core/releases/download/beta-9c693a2/torus-win-x64-9c693a2.zip) |
-| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-9c693a2.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-9c693a2/torus-mac-arm64-9c693a2.tar.gz) |
-| Mac with an Intel processor | [torus-mac-x64-9c693a2.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-9c693a2/torus-mac-x64-9c693a2.tar.gz) |
+| Windows 10 or 11 | [torus-win-x64-d0d1aaa.zip](https://github.com/harrybuck/torus-core/releases/download/beta-d0d1aaa/torus-win-x64-d0d1aaa.zip) |
+| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-d0d1aaa.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-d0d1aaa/torus-mac-arm64-d0d1aaa.tar.gz) |
+| Mac with an Intel processor | [torus-mac-x64-d0d1aaa.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-d0d1aaa/torus-mac-x64-d0d1aaa.tar.gz) |
 
-Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-9c693a2/SHA256SUMS-9c693a2.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-9c693a2/SHA256SUMS-win-9c693a2.txt)
+Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-d0d1aaa/SHA256SUMS-d0d1aaa.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-d0d1aaa/SHA256SUMS-win-d0d1aaa.txt)
 
-[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [Changes in each build](RELEASE_NOTES.md) · [Build 9c693a2 release page](https://github.com/harrybuck/torus-core/releases/tag/beta-9c693a2)
+[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [Changes in each build](RELEASE_NOTES.md) · [Build d0d1aaa release page](https://github.com/harrybuck/torus-core/releases/tag/beta-d0d1aaa)
 
-## Before you install: your Twin needs an AI to think with
+## What you'll need
 
-The Torus works with **Claude Code**, **OpenAI Codex** and **Grok Bots**. You need **at least one of Claude Code or Codex**, installed and signed in with your own account. Besides chatting, it does your Twin's memory work in the background: summarising past conversations and preparing the notes you capture. Having both is fine; each Twin can use either.
+A paid **Claude** or **ChatGPT** plan, and nothing else to install first. After the Torus installs, its Setup page installs your AI for you (Claude Code for a Claude plan, Codex for a ChatGPT plan) and signs you in, with a button for each.
 
-**Claude Code** (needs a paid Claude plan). This is the command-line program, not the Claude Desktop app; Desktop is fine to have, but the Torus cannot use it.
-
-- Windows: the Torus can install it for you from the Setup card (Install Claude Code). Or open PowerShell and paste `irm https://claude.ai/install.ps1 | iex`
-- Mac: open Terminal and paste `curl -fsSL https://claude.ai/install.sh | bash`
-
-On Windows the installer may warn that its folder is not in your PATH, and typing `claude` may then fail in red. **That is fine.** The Torus finds it anyway. To sign in, paste `& "$env:USERPROFILE\.local\bin\claude.exe"`, follow the browser, then type `/exit`.
-
-**Codex** (needs a paid ChatGPT plan). On Windows, the Codex app from the Microsoft Store is enough: install it, sign in, and the Torus uses the Codex inside it (September 2026 build or later; an older Store build refuses to be started by other programs, and updating it fixes that). On a Mac, the ChatGPT app is enough the same way. Or, on either, install the command-line Codex with `npm install -g @openai/codex` and `codex login`; the Torus prefers that copy when both are present. If you have a working Codex somewhere else, give its path on the Setup card.
-
-**Grok Bots** (optional, needs the Grok Bot app) are an extra seat for a Twin: the same Twin, with the same memory, talking to you in Grok. They come on top of Claude Code or Codex, not instead of them, because Grok cannot do the background memory work. A Bot reaches your Torus over the internet, so set up [phone access](#reach-the-torus-from-your-phone) first; then make a Bot from the **Grok Bots** section of a Twin's page.
+The Torus also works with **Grok Bots**, as an optional extra seat for a Twin: the same Twin, with the same memory, talking to you in the Grok Bot app. They come on top of Claude Code or Codex, not instead of them, because Grok cannot do the Twin's background memory work. A Bot reaches your Torus over the internet, so set up [phone access](#reach-the-torus-from-your-phone) first; then make a Bot from the **Grok Bots** section of a Twin's page.
 
 ## Install on Windows
 
@@ -37,7 +28,7 @@ On Windows the installer may warn that its folder is not in your PATH, and typin
 2. Open the extracted folder and double-click **install**.
 3. Windows may show a blue *Windows protected your PC* box, because this beta is not yet code-signed. Choose **More info**, then **Run anyway**.
 4. Answer the two questions: your name, and where your data should live (press Enter for a Torus folder in your user folder).
-5. Settings opens in your browser. Follow the banner to **Install-Buddy**, who confirms everything works and helps you create your own Twin.
+5. Settings opens in your browser. On its **Setup** card, press **Install** for your AI (Claude Code or Codex), then **Sign in**. Then follow the banner to **Install-Buddy**, who confirms everything works and helps you create your own Twin.
 
 **Moving from the Obsidian-era Torus?** Tell Install-Buddy. He finds your old vault, tells you what he found, and on your go brings the old conversations into your new Twin's memory and every note and idea into the Library. Nothing in the old vault is changed or deleted.
 
@@ -46,7 +37,7 @@ No administrator rights are needed. The Torus starts by itself when you sign in 
 **If Windows refuses with no Run anyway button**, your PC has Smart App Control switched on, which is common on new Windows 11 computers. Open PowerShell and unblock the extracted folder, then double-click **install** again (type the folder name as it appears in your Downloads):
 
 ```
-gci ~\Downloads\torus-win-x64-9c693a2 -r | Unblock-File
+gci ~\Downloads\torus-win-x64-d0d1aaa -r | Unblock-File
 ```
 
 **No window while the Torus runs.** The Torus and its memory jobs run with no window on any account. If the Torus ever stops, the half-hourly memory job starts it again; `schtasks /run /tn "Torus Serve"` in PowerShell starts it at once.
@@ -56,7 +47,7 @@ gci ~\Downloads\torus-win-x64-9c693a2 -r | Unblock-File
 1. Download the archive for your Mac and double-click it to unpack.
 2. Open the unpacked folder and double-click **Install Torus.command**. It opens a Terminal window and runs the installer there.
 3. If macOS says it can't be opened because the developer is unidentified (this beta is not yet signed), right-click **Install Torus.command**, choose **Open**, then **Open** again.
-4. Answer the two questions. Settings opens in your browser; follow the banner to Install-Buddy.
+4. Answer the two questions. Settings opens in your browser. On its **Setup** card, press **Install** for your AI (Claude Code or Codex), then **Sign in**, then follow the banner to Install-Buddy.
 
 If you'd rather use a Terminal, `bash install.sh` in the unpacked folder is the same installer.
 
@@ -79,6 +70,19 @@ He checks that inbox every three minutes. Mail from a listed person reaches him 
 ## Ask your Twin to do something on a schedule
 
 Tell your Twin what to do and when, in his room, and he sets it up as a scheduled task. At the time you named, the Torus posts your request into his room as a message from you, and he does it the way he does anything you ask, with his memory and all his tools; the result is right there in the room. Enter your own email address on the Human card in Settings if you want him to be able to write to you.
+
+## If Setup can't install your AI
+
+The Setup card's Install button is the easy way. If it fails, or you'd rather do it yourself, install one of these and sign in to it with your own account; the Torus finds it. A Claude Code or Codex you already have works too.
+
+**Claude Code** (needs a paid Claude plan). This is the command-line program, not the Claude Desktop app; Desktop is fine to have, but the Torus cannot use it.
+
+- Windows: open PowerShell and paste `irm https://claude.ai/install.ps1 | iex`
+- Mac: open Terminal and paste `curl -fsSL https://claude.ai/install.sh | bash`
+
+On Windows the installer may warn that its folder is not in your PATH, and typing `claude` may then fail in red. **That is fine.** The Torus finds it anyway. To sign in, paste `& "$env:USERPROFILE\.local\bin\claude.exe"`, follow the browser, then type `/exit`.
+
+**Codex** (needs a paid ChatGPT plan). On Windows, the Codex app from the Microsoft Store is enough: install it, sign in, and the Torus uses the Codex inside it (September 2026 build or later; an older Store build refuses to be started by other programs, and updating it fixes that). On a Mac, the ChatGPT app is enough the same way. Or, on either, install the command-line Codex with `npm install -g @openai/codex` and `codex login`; the Torus prefers that copy when both are present. If you have a working Codex somewhere else, give its path on the Setup card.
 
 ## Already have the Torus? Upgrade with the same steps
 

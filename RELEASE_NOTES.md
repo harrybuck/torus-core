@@ -1,3 +1,11 @@
+# Changes since build 9c693a2 (13 November 2026)
+
+A small update from a test install on a fresh Windows computer. It upgrades in place the same way as below.
+
+- **No terminal needed for your AI.** The Setup page now has an **Install Codex** button beside **Install Claude Code**, so whichever plan you have, Claude or ChatGPT, the Torus installs the AI for you and you sign in with a button. The README now says so up front, and keeps the manual steps in a fallback section near the end.
+- **The installer shows its progress.** Each stage gets its own line, with dots while it waits for the Torus to start, instead of a silent cursor that looked like a hang.
+- **The installer no longer contradicts itself** by saying "No folder to choose" straight after asking where your data should live.
+
 # Changes since build 50c6e81 (3 November 2026)
 
 This is a cumulative update for Windows 10/11, Apple-silicon Macs and Intel Macs. It upgrades in place and keeps your data, Twins, memory, chats and sign-ins. You can go straight to it from 50c6e81 or any earlier build; changes from earlier builds are listed further down and are included. A fresh installation needs nothing from this section: follow the package README.
