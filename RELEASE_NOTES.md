@@ -1,3 +1,11 @@
+# Changes since build 622a3de (16 November 2026)
+
+From a clean install on an Intel Mac.
+
+- **Creating a Twin works on a Mac whose AI the Torus installed.** The form said no AI was installed and refused, because on a Mac it only looked for the apps in Applications. It now finds Claude Code and Codex where the Torus installs them.
+- **The Claude code is accepted even when it was copied across two lines.** Claude prints it wrapped to its window, so the copy can carry a line break or a space; the Torus now takes those out.
+- **The sign-in window is called the sign-in window.** It was "the black window", which it isn't on a Mac. The drawing shows a plain window, and the middle code is marked "if asked", since Claude often finishes by itself.
+
 # Changes since build e1ba5bc (15 November 2026)
 
 - **Signing in to ChatGPT from Get started works for a Twin who doesn't have Codex on yet.** It used to stop on "No such Twin harness"; the sign-in now goes through and switches Codex on for that Twin.
