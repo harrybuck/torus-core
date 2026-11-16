@@ -1,3 +1,9 @@
+# Changes since build 2d54d28 (16 November 2026)
+
+- **Git is no longer needed.** Clean installs on Windows and on a Mac without Apple's developer tools ran Claude Code and Codex Twins with no git at all, so Get started no longer asks for it. Settings still notes whether it's there, for programming work.
+- **A closed alert stays closed for half an hour.** A room alert you dismiss no longer comes back minutes later; it can return after 30 minutes, and only if it's still true. Grok Bot alerts no longer count every call the Bot makes as a new alert.
+- **Orientation names the identity file plainly**, as AGENTS/CLAUDE: Codex reads AGENTS.md and Claude reads CLAUDE.md, and they are one file.
+
 # Changes since build 622a3de (16 November 2026)
 
 From a clean install on an Intel Mac.
