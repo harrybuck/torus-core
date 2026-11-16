@@ -1,3 +1,8 @@
+# Changes since build e1ba5bc (15 November 2026)
+
+- **Signing in to ChatGPT from Get started works for a Twin who doesn't have Codex on yet.** It used to stop on "No such Twin harness"; the sign-in now goes through and switches Codex on for that Twin.
+- **Upgrading says what it's doing.** The installer now reports when it is checking the download and copying the new version, instead of sitting quietly for most of a minute.
+
 # Changes since build da0b4b1 (15 November 2026)
 
 From another clean Windows install. It upgrades in place and keeps your data, Twins, memory, chats and sign-ins.
