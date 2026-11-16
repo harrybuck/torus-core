@@ -4,17 +4,17 @@ A home for your personal AI Twin: a small program that runs on your own computer
 
 This is a **beta**. Expect rough edges. When something goes wrong or confuses you, [open an issue](https://github.com/harrybuck/torus-core/issues/new) and say what you did and what you saw.
 
-## Download (build da0b4b1)
+## Download (build e1ba5bc)
 
 | Your computer | File | Then |
 |---|---|---|
-| Windows 10 or 11 | [torus-win-x64-da0b4b1.zip](https://github.com/harrybuck/torus-core/releases/download/beta-da0b4b1/torus-win-x64-da0b4b1.zip) | Use **Extract All** on this file, not **Open file**: the installer can't run from inside the zip. |
-| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-da0b4b1.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-da0b4b1/torus-mac-arm64-da0b4b1.tar.gz) | Double-click it to unpack, then right-click **Install Torus.command** and choose **Open** (this beta is not yet signed). |
-| Mac with an Intel processor | [torus-mac-x64-da0b4b1.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-da0b4b1/torus-mac-x64-da0b4b1.tar.gz) | Double-click it to unpack, then right-click **Install Torus.command** and choose **Open** (this beta is not yet signed). |
+| Windows 10 or 11 | [torus-win-x64-e1ba5bc.zip](https://github.com/harrybuck/torus-core/releases/download/beta-e1ba5bc/torus-win-x64-e1ba5bc.zip) | Use **Extract All** on this file, not **Open file**: the installer can't run from inside the zip. |
+| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-e1ba5bc.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-e1ba5bc/torus-mac-arm64-e1ba5bc.tar.gz) | Double-click it to unpack, then right-click **Install Torus.command** and choose **Open** (this beta is not yet signed). |
+| Mac with an Intel processor | [torus-mac-x64-e1ba5bc.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-e1ba5bc/torus-mac-x64-e1ba5bc.tar.gz) | Double-click it to unpack, then right-click **Install Torus.command** and choose **Open** (this beta is not yet signed). |
 
-Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-da0b4b1/SHA256SUMS-da0b4b1.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-da0b4b1/SHA256SUMS-win-da0b4b1.txt)
+Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-e1ba5bc/SHA256SUMS-e1ba5bc.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-e1ba5bc/SHA256SUMS-win-e1ba5bc.txt)
 
-[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [Changes in each build](RELEASE_NOTES.md) · [Build da0b4b1 release page](https://github.com/harrybuck/torus-core/releases/tag/beta-da0b4b1)
+[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [Changes in each build](RELEASE_NOTES.md) · [Build e1ba5bc release page](https://github.com/harrybuck/torus-core/releases/tag/beta-e1ba5bc)
 
 ## What you'll need
 
@@ -37,7 +37,7 @@ No administrator rights are needed. The Torus starts by itself when you sign in 
 **If Windows refuses with no Run anyway button**, your PC has Smart App Control switched on, which is common on new Windows 11 computers. Open PowerShell and unblock the extracted folder, then double-click **install** again (type the folder name as it appears in your Downloads):
 
 ```
-gci ~\Downloads\torus-win-x64-da0b4b1 -r | Unblock-File
+gci ~\Downloads\torus-win-x64-e1ba5bc -r | Unblock-File
 ```
 
 **No window while the Torus runs.** The Torus and its memory jobs run with no window on any account. If the Torus ever stops, the half-hourly memory job starts it again; `schtasks /run /tn "Torus Serve"` in PowerShell starts it at once.

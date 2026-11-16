@@ -1,3 +1,15 @@
+# Changes since build da0b4b1 (15 November 2026)
+
+From another clean Windows install. It upgrades in place and keeps your data, Twins, memory, chats and sign-ins.
+
+- **One ChatGPT sign-in for every Twin.** Sign in to ChatGPT once and every Twin that runs Codex uses it, including ones you create later. The Torus keeps every Twin on that one sign-in as ChatGPT renews it, so they no longer fall out of sign-in together after a week or so. A Twin you deliberately signed in to a different ChatGPT account keeps it.
+- **Codex switches on when you sign in.** A Twin created before Codex was installed gets it when you sign in, and so does any Twin set to All harnesses. Switching Codex on by hand no longer refuses for want of a sign-in.
+- **The model menu finds an AI installed after the Torus started**, without pressing Recheck. Before, a fresh install could show an old, short list until you did.
+- **Clearer Codex sign-in.** The one-time code page explains that you sign in to your ChatGPT account first and enter the code as the last step.
+- **Get started** names the two AIs plainly, Claude Code and ChatGPT Codex, and says Sign in for Codex until it really is signed in.
+- **Deleting a Twin archives his own chat room**, instead of leaving a room in the list that nobody answers.
+- **Installing an AI** now says "Page will update when complete", with no Recheck to press.
+
 # Changes since build c337427 (15 November 2026)
 
 - **What to expect when signing in to Claude.** Signing in meets three different codes in a row. The sign-in page now shows them in order with a small drawing each: six digits by email for Claude's page, a long code from Claude's page for the black sign-in window, and the code starting sk-ant- for the Torus.
