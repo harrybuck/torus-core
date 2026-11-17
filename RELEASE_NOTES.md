@@ -1,3 +1,10 @@
+# Torus 1.0.29 (16 November 2026)
+
+- **Settings reads like the rooms.** Statuses (the Setup checks, Automation's state, who sent an email) are plain words with a coloured dot; only buttons have outlines.
+- **Telegram and X capture are under Advanced.** Email stays in view.
+- **No repeated next step.** The banner above Get started no longer says what Get started already says; it appears only for the steps after.
+- **One way to sign in to ChatGPT.** The old "Use this Mac's ChatGPT sign-in" button is gone: every Twin already shares the Torus's one sign-in.
+
 # Torus 1.0.28 (16 November 2026)
 
 - **One size for room controls.** Everything in a room's header and the bar under the composer, attachments included, is now the same height, a little smaller than before. **Turn limit** fits its words.
