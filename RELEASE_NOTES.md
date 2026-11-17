@@ -1,3 +1,14 @@
+# Torus 1.0.27 (16 November 2026)
+
+The first release with a version number, from a clean install on a new Apple-silicon Mac. Builds before this one were named by code fingerprint; from here on it's 1.0.27, 1.0.28 and so on, and the fingerprint shows beside the number in Settings.
+
+- **Installing on a current Mac.** macOS no longer lets you right-click → Open an unsigned installer. The download page and README now give the way that works: press **Done**, then **Open Anyway** in System Settings → Privacy & Security.
+- **Twins wake with an older Claude Code.** A Claude Code a few months old reports the Torus's tools as still connecting when a Twin starts, and the Torus took that as a failure. It no longer does, and the advice it gives on a real failure no longer quotes a Terminal command.
+- **Get started says when your AI is out of date**, with an **Update** button, including a Claude Code or Codex you had before the Torus.
+- **Install-Buddy's first link opens the Create a Twin form** itself, not the Settings page.
+- **The model menu no longer lists a model twice**, once usable and once greyed as needing an update.
+- **Rooms are easier to read.** Buttons have outlines and statuses don't: turn numbers and delivery are plain words, delivery with a coloured dot, and a Twin's state under the composer is a dot in his colour. The model and its effort are one control at one size. One kind of chevron everywhere. The paging buttons are one control, **Turn limit** says what it is, and Stop only appears while there's something to stop.
+
 # Changes since build 2d54d28 (16 November 2026)
 
 - **Git is no longer needed.** Clean installs on Windows and on a Mac without Apple's developer tools ran Claude Code and Codex Twins with no git at all, so Get started no longer asks for it. Settings still notes whether it's there, for programming work.

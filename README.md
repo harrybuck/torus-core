@@ -4,17 +4,17 @@ A home for your personal AI Twin: a small program that runs on your own computer
 
 This is a **beta**. Expect rough edges. When something goes wrong or confuses you, [open an issue](https://github.com/harrybuck/torus-core/issues/new) and say what you did and what you saw.
 
-## Download (build 8607f2a)
+## Download (Torus 1.0.27 beta)
 
 | Your computer | File | Then |
 |---|---|---|
-| Windows 10 or 11 | [torus-win-x64-8607f2a.zip](https://github.com/harrybuck/torus-core/releases/download/beta-8607f2a/torus-win-x64-8607f2a.zip) | Use **Extract All** on this file, not **Open file**: the installer can't run from inside the zip. |
-| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-8607f2a.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-8607f2a/torus-mac-arm64-8607f2a.tar.gz) | Double-click it to unpack, then right-click **Install Torus.command** and choose **Open** (this beta is not yet signed). |
-| Mac with an Intel processor | [torus-mac-x64-8607f2a.tar.gz](https://github.com/harrybuck/torus-core/releases/download/beta-8607f2a/torus-mac-x64-8607f2a.tar.gz) | Double-click it to unpack, then right-click **Install Torus.command** and choose **Open** (this beta is not yet signed). |
+| Windows 10 or 11 | [torus-win-x64-1.0.27.zip](https://github.com/harrybuck/torus-core/releases/download/v1.0.27/torus-win-x64-1.0.27.zip) | Use **Extract All** on this file, not **Open file**: the installer can't run from inside the zip. |
+| Mac with Apple silicon (M1 or later) | [torus-mac-arm64-1.0.27.tar.gz](https://github.com/harrybuck/torus-core/releases/download/v1.0.27/torus-mac-arm64-1.0.27.tar.gz) | Double-click it to unpack, then double-click **Install Torus.command**. This beta is not yet signed: when macOS says it was not opened, press **Done**, then **Open Anyway** in System Settings → Privacy & Security, and open it again ([details](#install-on-a-mac)). |
+| Mac with an Intel processor | [torus-mac-x64-1.0.27.tar.gz](https://github.com/harrybuck/torus-core/releases/download/v1.0.27/torus-mac-x64-1.0.27.tar.gz) | Double-click it to unpack, then double-click **Install Torus.command**. This beta is not yet signed: when macOS says it was not opened, press **Done**, then **Open Anyway** in System Settings → Privacy & Security, and open it again ([details](#install-on-a-mac)). |
 
-Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/beta-8607f2a/SHA256SUMS-8607f2a.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/beta-8607f2a/SHA256SUMS-win-8607f2a.txt)
+Checksums: [Mac](https://github.com/harrybuck/torus-core/releases/download/v1.0.27/SHA256SUMS-1.0.27.txt) · [Windows](https://github.com/harrybuck/torus-core/releases/download/v1.0.27/SHA256SUMS-win-1.0.27.txt)
 
-[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [Changes in each build](RELEASE_NOTES.md) · [Build 8607f2a release page](https://github.com/harrybuck/torus-core/releases/tag/beta-8607f2a)
+[Upgrade instructions and what to expect](#already-have-the-torus-upgrade-with-the-same-steps) · [Changes in each build](RELEASE_NOTES.md) · [Torus 1.0.27 release page](https://github.com/harrybuck/torus-core/releases/tag/v1.0.27)
 
 ## What you'll need
 
@@ -37,7 +37,7 @@ No administrator rights are needed. The Torus starts by itself when you sign in 
 **If Windows refuses with no Run anyway button**, your PC has Smart App Control switched on, which is common on new Windows 11 computers. Open PowerShell and unblock the extracted folder, then double-click **install** again (type the folder name as it appears in your Downloads):
 
 ```
-gci ~\Downloads\torus-win-x64-8607f2a -r | Unblock-File
+gci ~\Downloads\torus-win-x64-1.0.27 -r | Unblock-File
 ```
 
 **No window while the Torus runs.** The Torus and its memory jobs run with no window on any account. If the Torus ever stops, the half-hourly memory job starts it again; `schtasks /run /tn "Torus Serve"` in PowerShell starts it at once.
@@ -46,8 +46,8 @@ gci ~\Downloads\torus-win-x64-8607f2a -r | Unblock-File
 
 1. Download the archive for your Mac and double-click it to unpack.
 2. Open the **Torus-Installer** folder it unpacks to and double-click **Install Torus.command**. It opens a Terminal window and runs the installer there.
-3. If macOS says it can't be opened because the developer is unidentified (this beta is not yet signed), right-click **Install Torus.command**, choose **Open**, then **Open** again.
-4. Answer the two questions. Settings opens in your browser. On its **Setup** card, press **Install** for your AI (Claude Code or Codex), then **Sign in**, then follow the banner to Install-Buddy.
+3. This beta is not yet signed, so the first time macOS says **"Install Torus.command" Not Opened**. Press **Done** (not Move to Trash). Then open **System Settings → Privacy & Security**, scroll down to **Security**, and press **Open Anyway** beside *"Install Torus.command" was blocked*. Enter your Mac's password, double-click **Install Torus.command** again, and choose **Open Anyway** when it asks. (The Open Anyway line stays for about an hour; if it's gone, double-click the installer once more to bring it back. On older macOS, right-click the installer and choose **Open** instead.)
+4. Answer the two questions. Settings opens in your browser. Under **Get started**, press **Install** for your AI (Claude Code or ChatGPT Codex), then **Sign in**, then go on to Install-Buddy's chat.
 
 If you'd rather use a Terminal, `bash install.sh` in the Torus-Installer folder is the same installer.
 
