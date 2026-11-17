@@ -1,3 +1,8 @@
+# Torus 1.0.28 (16 November 2026)
+
+- **One size for room controls.** Everything in a room's header and the bar under the composer, attachments included, is now the same height, a little smaller than before. **Turn limit** fits its words.
+- **The effort picker is a Torus menu.** Pressing the model and effort control opens a menu like Re-orient's and Roster's, titled *Reasoning effort*, with a line on what it means, in place of the browser's plain list.
+
 # Torus 1.0.27 (16 November 2026)
 
 The first release with a version number, from a clean install on a new Apple-silicon Mac. Builds before this one were named by code fingerprint; from here on it's 1.0.27, 1.0.28 and so on, and the fingerprint shows beside the number in Settings.
