@@ -1,3 +1,17 @@
+# Torus 1.0.31 (20 November 2026)
+
+A security pass, from an automated review of every part of the Torus the outside world can reach.
+
+- **Links can't reach inside your network.** Fetching a page, reading a source, attaching a file from a link and pulling images out of articles or email now refuse addresses on your own computer, your home network and your tailnet, and check every redirect, not just the first address. Very large downloads are cut off as they arrive.
+- **Images can't act as you.** An SVG image, attached or arriving by email, can no longer run script when opened, and pages written by a Twin run in a sealed-off space without your sign-in.
+- **Grok Bots get a tighter set of tools.** A Bot can attach files only by link, never from your computer, and schedules or changes only its own Twin's tasks. Adopting old Torus conversations is left to you. For everyone, attaching a file by path refuses the hidden folders where sign-ins are kept.
+- **The ChatGPT sign-in is saved more carefully,** whole or not at all, so two Twins starting together can't damage it.
+- **Stop says it heard you.** Pressing a room's Stop button now pulses at once, like Re-orient, and a second press is ignored while the turn winds down.
+
+# Torus 1.0.30 (19 November 2026)
+
+- **Grok Bots ask you about re-orienting themselves.** A Bot working from an old orientation is reminded on its own Torus answers, and asks you once at a natural pause. The reminder in your chat rooms now appears only after a week, or a hundred Torus calls, without one.
+
 # Torus 1.0.29 (16 November 2026)
 
 - **Settings reads like the rooms.** Statuses (the Setup checks, Automation's state, who sent an email) are plain words with a coloured dot; only buttons have outlines.
